@@ -100,7 +100,7 @@ When using a subagent:
 - State why it is needed.
 - Ask one explicit question.
 - Summarize results in 10 bullets or fewer.
-- Never forward raw subagent output to the human.
+- Summarize subagent output for readability, and provide raw output or tool logs immediately when requested.
 
 ### Early-Stop Permission (Medium)
 If you discover that:
@@ -208,7 +208,7 @@ Minimize wasted cycles. Every tool call, re-read, and summary costs time and att
 - **Batch related edits into single operations.** Don't make 5 edits when 1 handles it.
 - **Skip filler phrases.** No "I'll continue...", "Let me now...", "Great, moving on..." — just do it.
 - **Plan before acting.** If a task needs 1 tool call, don't use 3.
-- **Don't summarize what you just did unless the result is ambiguous** or you need the human's input on the next step.
+- **Keep updates concise, but summarize actions and outcomes at meaningful checkpoints.** Include raw command output when requested or when verification depends on it.
 
 ## Leverage Patterns
 
