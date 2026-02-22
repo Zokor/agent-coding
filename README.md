@@ -9,7 +9,7 @@ Use this skill for non-trivial coding tasks that need clear planning, scoped exe
 - **Authority model** — human is the architect, agent is the hands
 - **Plan mode** — structured planning for non-trivial tasks, lite mode for small changes
 - **Task tracking** — shared execution ledger via `tasks/todo.md`
-- **Verification** — never mark done without proof; escalate after repeated failures
+- **Verification** — never mark done without proof; frontend tasks require E2E coverage for changed user flows; escalate after repeated failures
 - **Subagent strategy** — one task per subagent, no architectural authority
 - **Core behaviors** — assumption surfacing, confusion management, push-back, simplicity enforcement, scope discipline
 - **Execution efficiency** — no redundant reads, no redundant commands, batch edits, skip filler, plan before acting

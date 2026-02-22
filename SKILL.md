@@ -77,6 +77,7 @@ You must:
 - Run tests or equivalent verification.
 - Check logs or outputs when relevant.
 - Diff old vs new behavior when behavior changes.
+- **Frontend tasks**: e2e tests covering the changed user flow are required as part of done. Follow conventions in `agent-conventions -> frameworks/frontend/e2e.md`.
 
 Failure handling:
 - 1st failure: diagnose and retry.
