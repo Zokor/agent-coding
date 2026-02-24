@@ -16,32 +16,35 @@ Use this skill for non-trivial coding tasks that need clear planning, scoped exe
 - **Leverage patterns** — declarative goals, test-first, naive-then-optimize
 - **Output standards** — direct communication, structured change descriptions, failure modes to avoid
 
-## Install
+## Installation
+
+Install with `npx skills add` only.
 
 ```bash
-npx skills add Zokor/agent-coding
+# Project-local (writes under current repo)
+npx -y skills add Zokor/agent-coding --skill agent-coding --agent claude-code codex --yes
+
+# Global (writes under home directory)
+npx -y skills add Zokor/agent-coding -g --skill agent-coding --agent claude-code codex --yes
 ```
 
-Recommended global install across detected agents:
+- Project-local install creates `./.agents/skills/agent-coding` and links `./.claude/skills/agent-coding`.
+- Global install creates `~/.agents/skills/agent-coding` and links `~/.claude/skills/agent-coding`.
+
+Useful management commands:
 
 ```bash
-npx skills add Zokor/agent-coding -g --agent '*' -y
-```
-
-## Management Commands
-
-```bash
-# Discover skill metadata without installing
-npx skills add Zokor/agent-coding --list
+# List skills exposed by the repo
+npx -y skills add Zokor/agent-coding --list
 
 # List installed skills
-npx skills list
+npx -y skills list
 
-# Remove skill globally from all agents
-npx skills remove agent-coding -g --agent '*' -y
+# List globally installed skills
+npx -y skills list -g
 
-# Check and update installed skills
-npx skills check && npx skills update
+# Check and apply skill updates
+npx -y skills check && npx -y skills update
 ```
 
 ## Migration from `agentic-coding`
@@ -51,11 +54,11 @@ The canonical skill name is now `agent-coding`.
 If you still have `agentic-coding` installed, remove it:
 
 ```bash
-npx skills remove agentic-coding -g --agent '*' -y
+npx -y skills remove agentic-coding -g --agent '*' --yes
 ```
 
 Then install `agent-coding`:
 
 ```bash
-npx skills add Zokor/agent-coding -g --agent '*' -y
+npx -y skills add Zokor/agent-coding -g --skill agent-coding --agent claude-code codex --yes
 ```
