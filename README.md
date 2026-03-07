@@ -16,6 +16,22 @@ Use this skill for non-trivial coding tasks that need clear planning, scoped exe
 - **Leverage patterns** — declarative goals, test-first, naive-then-optimize
 - **Output standards** — direct communication, structured change descriptions, failure modes to avoid
 
+## Benchmark
+
+Tested against 3 evals (multi-step refactor, bug fix with ambiguity, feature addition) with 15 total assertions covering planning discipline, assumption surfacing, security awareness, scope discipline, and code correctness.
+
+| Configuration | Pass Rate | Avg Tokens | Avg Time |
+|---------------|-----------|------------|----------|
+| **With skill** | **100%** (15/15) | 15,496 | 53.6s |
+| Without skill | 80% (12/15) | 10,617 | 39.2s |
+| **Delta** | **+20pp** | +4,879 | +14.4s |
+
+Key differentiators vs baseline:
+- **Planning**: Skill always produces explicit PLAN and ASSUMPTIONS blocks; baseline skips them
+- **Security awareness**: Skill identifies all issues including hardcoded secrets (flags out-of-scope ones without fixing); baseline misses some
+- **Scope discipline**: Skill uses structured CHANGES MADE / THINGS I DIDN'T TOUCH / POTENTIAL CONCERNS output
+- **Verification**: Skill adds verification steps (e.g., route-by-route equivalence audit on refactors)
+
 ## Installation
 
 Install with `npx skills add` only.
