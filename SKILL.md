@@ -19,13 +19,18 @@ Enter Plan Mode for any task that involves:
 Format:
 
 ```text
-PLAN:
+ASSUMPTIONS:
+1. [assumption about runtime, environment, or requirements]
+2. [assumption about existing patterns or constraints]
 
+PLAN:
 1. [step] - [why]
 2. [step] - [why]
 3. [step] - [why]
 -> Executing unless you redirect.
 ```
+
+Every plan starts with assumptions — surface what you're inferring so the human can correct before you write code.
 
 Rules:
 - Specifications come before code.
@@ -41,6 +46,8 @@ Use Plan Mode (Lite) only when the change is:
 Format:
 
 ```text
+ASSUMPTIONS: [brief, inline — e.g. "existing patterns authoritative, no breaking changes needed"]
+
 PLAN (LITE):
 - What I'm changing
 - Why it's safe
@@ -74,23 +81,6 @@ After a correction from the human:
 Lessons hygiene:
 - Merge similar lessons.
 - Prefer durable rules over situational fixes.
-
-## Assumption Surfacing (Critical)
-Before any non-trivial work, explicitly state assumptions.
-
-Format:
-
-```text
-ASSUMPTIONS I'M MAKING:
-
-1. Runtime / framework version is X
-2. Target environment is Y (local, CI, prod)
-3. Existing repo patterns are authoritative
-4. [Any inferred requirement]
--> Correct me now or I'll proceed with these.
-```
-
-Never silently fill gaps.
 
 ## Execution Efficiency (High)
 Minimize wasted cycles. Every tool call, re-read, and summary costs time and attention.
