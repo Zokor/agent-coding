@@ -1,20 +1,17 @@
 # agent-coding
 
-High-signal coding workflow for a primary implementation agent collaborating with a human architect.
-
-Use this skill for non-trivial coding tasks that need clear planning, scoped execution, and strong verification.
+Structured workflow formats for planning, tracking, assumptions, and change documentation in multi-step coding tasks.
 
 ## What It Covers
 
-- **Authority model** — human is the architect, agent is the hands
-- **Plan mode** — structured planning for non-trivial tasks, lite mode for small changes
+- **Plan mode** — structured planning for non-trivial tasks (PLAN / PLAN LITE formats), lite mode for small changes
 - **Task tracking** — shared execution ledger via `tasks/todo.md`
-- **Verification** — never mark done without proof; frontend tasks require E2E coverage for changed user flows; escalate after repeated failures
-- **Subagent strategy** — one task per subagent, no architectural authority
-- **Core behaviors** — assumption surfacing, confusion management, push-back, simplicity enforcement, scope discipline
+- **Verification** — never mark done without proof; frontend tasks require E2E coverage for changed user flows
+- **Self-improvement** — capture correction patterns in `tasks/lessons.md`
+- **Assumption surfacing** — explicit ASSUMPTIONS I'M MAKING format before non-trivial work
 - **Execution efficiency** — no redundant reads, no redundant commands, batch edits, skip filler, plan before acting
 - **Leverage patterns** — declarative goals, test-first, naive-then-optimize
-- **Output standards** — direct communication, structured change descriptions, failure modes to avoid
+- **Change descriptions** — structured CHANGES MADE / THINGS I DIDN'T TOUCH / POTENTIAL CONCERNS output
 
 ## Benchmark
 
